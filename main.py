@@ -28,9 +28,9 @@ with st.container():
     with col1:
         st.metric('👥 Number of players', len(filtered_data))
     with col2:
-        st.metric('💰 Average player market value (per Player, M€)', f"{filtered_data['price'].mean():,.2f}")
+        st.metric('💰 Avg. player market value (M€)', f"{filtered_data['price'].mean():,.2f}")
     with col3:
-        st.metric('🎯 Highest market value (per Player, M€)', f"{filtered_data['price'].max():,.2f}")
+        st.metric('🎯 Highest player market value (M€)', f"{filtered_data['price'].max():,.2f}")
     with col4:
         st.metric('📏 Average height (m)', f"{filtered_data['height'].mean():.1f}")
 
