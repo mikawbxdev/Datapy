@@ -32,7 +32,7 @@ with st.container():
     with col3:
         st.metric('🎯 Highest Market Value (M€)', f"{filtered_data['price'].max():,.2f}")
     with col4:
-        st.metric('📏 Average Height (cm)', f"{filtered_data['height'].mean():.1f}")
+        st.metric('📏 Average Height (m)', f"{filtered_data['height'].mean():.1f}")
 
 # Visualizations
 st.subheader('📈 Data Visualization')
