@@ -11,9 +11,9 @@ st.title('🏆 Bundesliga Player Dashboard')
 
 # Sidebar for filtering
 st.sidebar.header('🔍 Filter')
+position = st.sidebar.selectbox('Select Position', options=['All'] + list(data['position'].unique()))
 nationalities = st.sidebar.multiselect('Select Nationality', options=data['nationality'].unique(), default=data['nationality'].unique())
 clubs = st.sidebar.multiselect('Select Club', options=data['club'].unique(), default=data['club'].unique())
-position = st.sidebar.selectbox('Select Position', options=['All'] + list(data['position'].unique()))
 
 # Apply filters
 filtered_data = data[data['nationality'].isin(nationalities) & data['club'].isin(clubs)]
